@@ -1,0 +1,22 @@
+<p>
+  meu-componente works!
+  <br>
+  {{nome}}
+  <br>
+
+  <!-- vai atualizar em tempo de execução o valor da variavel nome do controller.ts com o valor capturado no campo de texto -->
+  <input type="text" (input)="passarValor($event.target.value)">
+  <br>
+
+  <!-- vai atualizar o valor da variavel após terminar de alterar o valor do input 'apos clicar fora'
+    nome do controller.ts com o valor capturado no campo de texto -->
+  <input type="text" (change)="this.nome = $event.target.value">
+  <br>
+
+  <!-- vai atualizar o valor da variavel após terminar de alterar o valor do input 'apos clicar fora' mesmo que o change
+    nome do controller.ts com o valor capturado no campo de texto -->
+  <input type="text" (blur)="this.nome = $event.target.value">
+  <br>
+
+
+</p>

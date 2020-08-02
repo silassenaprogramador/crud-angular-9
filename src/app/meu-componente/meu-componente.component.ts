@@ -1,0 +1,23 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-meu-componente',
+  templateUrl: './meu-componente.component.html',
+  styleUrls: ['./meu-componente.component.css']
+})
+export class MeuComponenteComponent implements OnInit {
+
+
+  nome:string;
+
+  constructor() { }
+
+  ngOnInit() {
+    this.nome = 'nome variavel';
+  }
+
+  passarValor(nome:string){
+    this.nome = nome;
+  }
+
+}
